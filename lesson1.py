@@ -274,12 +274,207 @@
 # new_str = "$".join(new_list)
 # print(new_str)
 
-filename = "lesson1.py.txt"
+# filename = "lesson1.py.txt"
 
 ##  filename = filename.replace(".txt", "")
 
 # filename_parts = filename.split(".")
 # filename = ".".join(filename_parts[:-1])
 
-filename = filename.rsplit(".", 1)[0]  # задать вопрос
-print(filename)
+# filename = filename.rsplit(".", 1)[0]  # задать вопрос
+# print(filename)
+
+#### практика
+
+# my_str = "blablacar"
+# my_symbol = "bla"
+
+# result = my_str.count(my_symbol)
+# # new_str = my_str.replace(my_symbol, '')
+# # result = (len(my_str) - len(new_str)) // len(my_symbol)
+# print(result)
+###############################################################
+# my_symbol_count = my_str.count(my_symbol)
+# # result =  f"{my_symbol}\n" * my_symbol_count
+# # result = result.strip()
+# # print(result)
+#
+# for my_count in range(my_symbol_count):
+#     print(my_symbol)
+#################################################################
+# my_str = "bla BLA car"
+# lower_str = my_str.lower()
+# unique_symbols = []
+# for symbol in lower_str:
+#     if symbol not in unique_symbols:
+#         unique_symbols.append(symbol)
+# unique_symbols_count = len(unique_symbols)
+# print(unique_symbols_count)
+
+# my_str = "bla BLA car"
+# lower_str = my_str.lower()
+# unique_symbols = set(lower_str)
+# print(unique_symbols)
+# unique_symbols_count = len(unique_symbols)
+# print(unique_symbols_count)
+
+# my_str = "bla BLA car"
+# unique_symbols_count = len(set(my_str.lower()))
+# print(unique_symbols_count)
+#################################################################
+# my_list = []
+# my_str = "ksjbndvlgsbvd"
+# print(id(my_list), my_list)
+# new_str = my_str[::2]
+# # for symbol in new_str:
+# #     my_list.append(symbol)
+# my_list += list(new_str)
+# print(id(my_list), my_list)
+################################################################
+# val_1 = 123
+# val_2 = 100
+# val_1 += val_2
+# print(val_1)
+################################################################
+# from string import ascii_lowercase as alphabet
+# my_str = alphabet
+# str_index = [7, 8, 11, 11, 4, 11]
+# my_list = []
+# for index in str_index:
+#     symbol = my_str[index]
+#     my_list.append(symbol)
+# print(my_list)
+################################################################
+# number = 123456789123456789
+# digit_count = len(str(number))
+# print(digit_count)
+################################################################
+# number = 3276276173811313
+# max_symbol = max(str(number))
+# print(max_symbol)
+################################################################
+# number = 27368761846874123
+# # numb_str = str(number)
+# result_number = int(str(number)[::-1])
+# # result_number = int(numb_str[::-1])
+# print(result_number)
+#################################################################
+# number = 73242472770241
+# numb_str = str(number)
+# sort_numb_list = sorted(numb_str)
+# new_number = "".join(sort_numb_list)
+# result = int(new_number)
+# print(result)
+#################################################################
+# number = 46264822770241
+# numb_str = str(number)
+# sort_numb_list = sorted(numb_str)
+# new_number = "".join(sort_numb_list[::-1])
+# result = int(new_number)
+# print(result)
+
+# number = 46264822770241
+# numb_str = str(number)
+# sort_numb_list = sorted(numb_str, reverse=True)
+# new_number = "".join(sort_numb_list)
+# result = int(new_number)
+# print(result)
+#
+# my_list = [3, 6, 1, 8]
+# # my_list_sorted = sorted(my_list, reverse=True) # новый id
+# my_list.sort(reverse=True) # старый id
+# print(my_list)
+#################################################################
+# my_list_1 = [1, 2, 3]
+# my_list_2 = [10, 20, 30]
+# my_result = []
+#
+# for index in range(len(my_list_1)):
+#     my_result.extend([my_list_1[index], my_list_2[index]])
+#     # my_result.append(my_list_1[index])
+#     # my_result.append(my_list_2[index])
+# print(my_result)
+################################################################
+# my_list_1 = [1, 2, 3, 4, 5, 6, 7, 8]
+# my_list_2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# my_result = []
+# min_len_lists = min(len(my_list_1), len(my_list_2))
+# tail = my_list_1[min_len_lists:] + my_list_2[min_len_lists:]
+# print(tail)
+# for index in range(min_len_lists):
+#     my_result.append(my_list_1[index])
+#     my_result.append(my_list_2[index])
+# my_result.extend(tail)
+# print(my_result)
+###############################################################
+# ord(), chr()
+# print(ord("A"))
+# print(chr(110))
+
+# генераторы списков (list comprehension)
+# alphabet_list = []
+# for index_ascii in range(ord('a'), ord('z') + 1):
+#     alphabet_list.append(chr(index_ascii))
+# alphabet = " ".join(alphabet_list)
+
+
+# alphabet_list = [chr(index_ascii) for index_ascii in range(ord('a'), ord('z') + 1)]
+# alphabet = " ".join(alphabet_list)
+# print(alphabet)
+
+# result = [x ** 2 for x in range(25)]
+# print(result)
+
+# my_list = [12, -45, 23, 5, 0, 21, 900]
+# res = [str(value) * 20 for value in my_list if value > 10]
+# # res = []
+# # for value in my_list:
+# #     if value > 10:
+# #         res.append(value)
+# [print(line) for line in res]
+# # for line in res:
+# #     print(line)
+# # print(res)
+
+# # множества (set) - изменяемый тип данных, только один представитель для каждого объекта, порядок не сохраняется
+# my_list = [1, "2", 3, 4, 5, 5, "1", "5"]
+# my_list_unique = list(set(my_list)) # убрать дубли в списке
+# my_set = set(my_list)
+# my_set.add(100)
+# print(my_set, type(my_set))
+
+# пересечение множеств
+# my_str_1 = "bbfivhbgvlibbhfbjdfhdjf"
+# my_str_2 = "dhfjdocmxnuhfihvidbpsbgwqtyeiosp"
+# my_str_1_set = set(my_str_1)
+# my_str_2_set = set(my_str_2)
+# same_symbols = my_str_1_set.intersection(my_str_2_set)
+# print(same_symbols)
+
+# объединение множеств
+# my_str_1 = "bbfivhbgvlibbhfbjdfhdjf"
+# my_str_2 = "dhfjdocmxnuhfihvidbpsbgwqtyeiosp"
+# my_str_1_set = set(my_str_1)
+# my_str_2_set = set(my_str_2)
+# all_symbols = my_str_1_set.union(my_str_2_set)
+# print(all_symbols)
+
+# разность множеств
+# my_str_1 = "bbfivhbgvlibbhfbjdfhdjf"
+# my_str_2 = "dhfjdocmxnuhfihvidbpsbgwqtyeiosp"
+# my_str_1_set = set(my_str_1)
+# my_str_2_set = set(my_str_2)
+# first_str_unique = my_str_1_set.difference(my_str_2_set)
+# print(first_str_unique)
+#
+# my_str_1 = "bbfivhbgvlibbhfbjdfhdjf"
+# my_str_2 = "dhfjdocmxnuhfihvidbpsbgwqtyeiosp"
+# my_str_1_set = set(my_str_1)
+# my_str_2_set = set(my_str_2)
+# second_str_unique = my_str_2_set.difference(my_str_1_set)
+# print(second_str_unique)
+
+
+
+
+
